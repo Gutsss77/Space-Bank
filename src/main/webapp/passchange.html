@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: whitesmoke;
+            background: url('css/img/black.jpeg') center/cover fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .change-password-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: whitesmoke;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: mediumturquoise;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .page-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .page-button>button {
+            background-color: mediumturquoise;
+            color: black;
+            padding: 13px 70px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: auto;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .page-button>button:hover {
+            background-color: rgb(20, 230, 223);
+            transform: scale(1.05);
+        }
+
+        p {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        p a {
+            color: mediumturquoise;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media screen and (max-width: 768px) {
+            .change-password-container {
+                padding: 20px;
+            }
+
+            input {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="change-password-container">
+            <h1>Change Password</h1>
+             <form action="changePassword" method="POST" onsubmit="return validateForm()">
+                <!-- Username -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+
+                <!-- Previous Password -->
+                <div class="input-group">
+                    <label for="prevPassword">Previous Password</label>
+                    <input type="password" id="prevPassword" name="prevPassword" required
+                        placeholder="Enter your previous password">
+                </div>
+
+                <!-- New Password -->
+                <div class="input-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" required
+                        placeholder="Enter a new password">
+                </div>
+
+                <!-- Confirm New Password -->
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required
+                        placeholder="Confirm your new password">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="page-button">
+                    <button type="submit">Change Password</button>
+                </div>
+            </form>
+
+            <!-- Back Link -->
+            <p><a href="customerDashboard.html">Back to Dashboard</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to validate form before submitting
+        function validateForm() {
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (newPassword !== confirmPassword) {
+                alert("New password and confirmation do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

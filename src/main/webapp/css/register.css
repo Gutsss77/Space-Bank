@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+}
+
+body {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: url('img/black.jpeg') center/ cover fixed;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-right: 5%;
+    padding-bottom: 4%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input field styles */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.user-type label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.user-type {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.user-type select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group input, .user-type select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-group input:focus, .gender-group select:focus {
+    border-color: mediumturquoise;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-button {
+    padding-top: 15px;
+}
+
+.page-button > button {
+    background-color: mediumturquoise;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.page-button > button:hover {
+    background-color: rgb(20, 230, 223);
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Sign-up link */
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: mediumturquoise;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+

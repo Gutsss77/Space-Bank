@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Funds</title>
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: whitesmoke;
+            background: url('css/img/black.jpeg') center/cover fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .transfer-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Each Half of the Form */
+        .form-half {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: whitesmoke;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: mediumturquoise;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .page-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .page-button>button {
+            background-color: mediumturquoise;
+            color: black;
+            padding: 13px 70px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: auto;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .page-button>button:hover {
+            background-color: rgb(20, 230, 223);
+            transform: scale(1.05);
+        }
+
+        p {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        p a {
+            color: mediumturquoise;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media screen and (max-width: 768px) {
+            .form-half {
+                width: 100%;
+            }
+
+            .transfer-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="transfer-container">
+            <h1>Transfer Funds</h1>
+            <form action="transferfunds" method="POST">
+			    <div class="form-half">
+			        <div class="input-group">
+			            <label for="receiver-account">Sender's Account Number</label>
+			            <input type="text" id="sender-account" name="sender_account" required placeholder="Enter sender's account number">
+			        </div>
+			        <div class="input-group">
+			            <label for="amount">Amount (in ₹)</label>
+			            <input type="number" id="amount" name="amount" required placeholder="Enter amount to transfer" min="1">
+			        </div>
+			    </div>
+			
+			    <div class="form-half">
+			        <div class="input-group">
+			            <label for="receiver-account">Receiver's Account Number</label>
+			            <input type="text" id="receiver-account" name="receiver_account" required placeholder="Enter receiver's account number">
+			        </div>
+			    </div>
+			
+			    <div class="page-button">
+			        <button type="submit">Transfer</button>
+			    </div>
+			</form>
+
+            <p><a href="customerDashboard.html">Back to Dashboard</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
