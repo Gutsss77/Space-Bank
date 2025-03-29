@@ -6,6 +6,8 @@
 
 This application allows users to perform various banking operations like checking balance, transferring funds, registering new accounts, logging in, and more.
 
+**Note**: This project is in the **working phase** and may not yet be fully functional in all areas.
+
 ## Features
 
 - **User Registration**: Allows new users to create an account.
