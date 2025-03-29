@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Balance</title>
+    <style>
+    /* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    background: url('css/img/black.jpeg') center/cover fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the balance check form */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container for check balance form */
+.check-balance-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Heading style */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* Form container style */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input group for each field */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Label for input fields */
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Input fields styling */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Focus effect on input fields */
+.input-group input:focus {
+    border-color: mediumturquoise;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+.page-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page-button>button {
+    background-color: mediumturquoise;
+    color: black;
+    padding: 13px 70px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: auto;
+    max-width: 250px;
+    text-align: center;
+}
+
+/* Hover effect for button */
+.page-button>button:hover {
+    background-color: rgb(20, 230, 223);
+    transform: scale(1.05);
+}
+
+/* Link styling */
+p {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+p a {
+    color: mediumturquoise;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .check-balance-container {
+        padding: 20px;
+    }
+}
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="check-balance-container">
+            <h1>Check Balance</h1>
+            <form action="CheckBalanceServlet" method="POST">
+                <div class="input-group">
+                    <label for="account-number">Account Number</label>
+                    <input type="text" id="account-number" name="account_number" required placeholder="Enter account number">
+                </div>
+
+                <div class="page-button">
+                    <button type="submit">Check Balance</button>
+                </div>
+            </form>
+            <p><a href="customerDashboard.html">Back to Dashboard</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

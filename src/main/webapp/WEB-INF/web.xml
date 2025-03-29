@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>SpaceBank</display-name>
+  <servlet>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<servlet-class>com.spacebank.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<servlet-class>com.spacebank.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RegisterBankServlet</servlet-name>
+  	<servlet-class>com.spacebank.RegisterBankServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterBankServlet</servlet-name>
+  	<url-pattern>/register-bank</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreditFundServlet</servlet-name>
+    <servlet-class>com.spacebank.CreditFundServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CreditFundServlet</servlet-name>
+    <url-pattern>/creditFunds</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DebitFundServlet</servlet-name>
+    <servlet-class>com.spacebank.DebitFundServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DebitFundServlet</servlet-name>
+    <url-pattern>/debitFunds</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>TransferFundServlet</servlet-name>
+    <servlet-class>com.spacebank.TransferFundServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TransferFundServlet</servlet-name>
+    <url-pattern>/transferfunds</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <servlet-name>CheckBalanceServlet</servlet-name>
+    <servlet-class>com.spacebank.CheckBalanceServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>CheckBalanceServlet</servlet-name>
+    <url-pattern>/CheckBalanceServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ChangePasswordServlet</servlet-name>
+	<servlet-class>com.spacebank.ChangePasswordServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ChangePasswordServlet</servlet-name>
+	<url-pattern>/changePassword</url-pattern>
+</servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>TransactionHistoryServlet</servlet-name>
+    <servlet-class>com.spacebank.TransactionHistoryServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>TransactionHistoryServlet</servlet-name>
+    <url-pattern>/TransactionHistory</url-pattern>
+</servlet-mapping>
+ 
+  
+  <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.spacebank.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

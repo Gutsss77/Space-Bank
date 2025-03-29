@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    background: url('img/black.jpeg') center/cover fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.register-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Each Half of the Form */
+.form-half {
+    width: 48%;
+    /* Half of the page */
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: mediumturquoise;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* .page-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-button>button {
+    background-color: mediumturquoise;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+} */
+
+.page-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* Ensure the parent container takes full width */
+}
+
+.page-button>button {
+    background-color: mediumturquoise;
+    color: black;
+    padding: 13px 70px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: auto;
+    /* This ensures the button shrinks to fit content */
+    max-width: 250px;
+    /* Optional: You can limit the button width if you prefer */
+    text-align: center;
+}
+
+
+.page-button>button:hover {
+    background-color: rgb(20, 230, 223);
+    transform: scale(1.05);
+}
+
+/* Sign-up link */
+p {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+p a {
+    color: mediumturquoise;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .form-half {
+        width: 100%;
+        /* Stack fields on top of each other */
+    }
+
+    .register-container {
+        padding: 20px;
+    }
+}

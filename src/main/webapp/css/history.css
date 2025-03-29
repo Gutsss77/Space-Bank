@@ -1,0 +1,146 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: whitesmoke;
+            background: url('css/img/black.jpeg') center/cover fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .transaction-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form input[type="text"] {
+            width: 250px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: whitesmoke;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        form input[type="text"]:focus {
+            border-color: mediumturquoise;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        form button {
+            background-color: mediumturquoise;
+            color: black;
+            padding: 13px 70px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: auto;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        form button:hover {
+            background-color: rgb(20, 230, 223);
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #333;
+            color: mediumturquoise;
+        }
+
+        table td {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: whitesmoke;
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        table tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        a {
+            color: mediumturquoise;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media screen and (max-width: 768px) {
+            .transaction-container {
+                padding: 20px;
+            }
+
+            form input[type="text"] {
+                width: 200px;
+            }
+
+            form button {
+                padding: 10px 20px;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
+            }
+        }

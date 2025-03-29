@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Space Bank</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" type="img/x-icon" href="/img/black-hole.png">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Register for Space Bank</h1>
+        <br>
+        <form action="register" method="POST">
+            
+            <!-- Username Field -->
+            <div class="input-group">
+                <label for="userName">Username:</label>
+                <input type="text" id="useNname" name="userName" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- User Type Dropdown -->
+            <div class="user-type">
+                <label for="userType">Select User Type:</label>
+                <select id="userType" name="userType">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div class="page-button">
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+        <p>Back to Home, Press here &nbsp;<a href="index.html">Home</a></p>
+    </div>
+</body>
+
+</html>
+
